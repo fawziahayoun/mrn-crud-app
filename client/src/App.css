@@ -1,0 +1,275 @@
+/*scroll style*/
+::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-scrollbar-track{
+  background-color: #777;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: black;
+
+}
+/* epmloyes style */
+.serch{
+  max-width: 300px;
+  margin: 40px auto;
+  height: 50px;
+}
+.main-serch{
+  position: relative;
+  
+}
+.main-serch .icon{
+  position: absolute;
+  color: #777;
+  right: 39%;
+  top: 67%; 
+  font-size: 20px; 
+}
+.app .go{
+  background-color: #e750b9;
+}
+.app .go:hover{
+  background-color: #d83daa;
+}
+thead{
+  background-color: #75add1;
+  text-align: center;
+}
+table th{
+  border:  1px solid #ddd;
+  padding: 10px;
+}
+
+.col  td{
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+
+}
+.col input{
+  border: none;
+  padding: 5px;
+   
+  border-radius: 6px  0 0 6px ;
+}
+.col input:focus{
+  outline: none;
+ 
+}
+.col .edit{
+  background-color: green;
+  border-radius: 0px 6px 6px 0;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+
+/*navbar style */
+.may-nav{
+  background-color: #fff33b;
+}
+.may-nav img{
+  max-width: 50px;
+}
+
+.navbar-nav li a{
+  color: #e91edf;
+  transition: 0.3s;
+  font-size: 18px;
+  position: relative;
+  margin-right: 15px;
+  font-weight: 700;
+  
+}
+@media(min-width:991px){
+  .navbar .nav-link{
+    color: #eee;
+    background-color:  #f407e1;
+    margin: 0 5px;
+    border-radius: 20px;
+    font-weight: bold;
+} 
+}
+@media(max-width:991px){
+  .navbar .nav-link{
+    
+    border-bottom: 1px solid #ddd;
+
+}
+ 
+.navbar-nav li a
+{
+  padding-left: 10px;
+}
+  .navbar-nav li a:hover{
+      padding-left: 20px;
+  } 
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:focus{
+    color: #1ea3e5;
+}
+
+/*sidebar*/
+.app{
+    position: relative;
+}
+.sidebar{
+  position: absolute;
+  z-index: 3;
+  height: 100vh;
+  margin-right: -12px;
+  width: 230px;
+  margin-left: -230px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(254, 253, 253 , 0.3) ;
+  transition: 0.6s;
+  margin-top: -50px;
+}
+.sidebar.act{
+  margin-left:0;
+}
+.sidebar .open{
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  top: 170px;
+  border: 1px solid #fff;
+  border-radius:0  6px  6px 0;
+  font-weight: bold;
+  transition: 0.6s;
+
+}
+.sidebar.act .open{
+  left: 230px; 
+} 
+
+.sidebar .link{
+  text-decoration: none;
+  background-color: #fff33b;
+  color: #777;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar .link{
+  width: 200px;
+  margin-left: -25px;
+}
+.image{
+  border-radius: 10px;
+}
+/*home*/
+.home{
+  height: 100vh;
+}
+.home img{
+  animation: up-down 3s linear infinite;
+}
+@keyframes up-down{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-10px);
+  }
+}
+.home p{
+  color: #eee;
+  font-size: 30px;
+  line-height: 2;  
+}
+@media(max-width:768px){
+  .home p{
+    font-size: 20px;
+    line-height: 1.5;  
+  } 
+
+}
+
+/*background style */
+ .add,
+ .view,
+ .contain{
+  height: 100vh;
+  background-image: url(./assets/react.jpg);
+  background-size: cover;
+  animation: back 10s linear infinite;
+  top: -50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .add::after,
+ .view::after,
+ .contain::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, .7);
+  width: 200%;
+  height: 100%;
+  z-index: 1;
+}
+@keyframes back{
+  0%{
+   background-image: url(./assets/react.jpg);
+  }
+  50%{
+ background-image: url(./assets/ysql.png);
+  }
+  100%{
+   background-image: url(./assets/node.jpg);
+   
+  }
+ }
+ .add .app{
+  background-color: rgb(255, 234, 0);
+  display: block;
+  margin-top: -50px;
+  margin-left: 50px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+  transition: 0.3s;
+  font-size: 18px;
+}
+@media(min-width:768px){
+  .add .app{
+    width: 600px;
+  }
+}
+.add:hover .app{
+  transform: translateY(-10px);
+  
+}
+.contain .show{
+  position: absolute;
+  z-index: 2;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: red;
+  
+}
+
+/*view page style*/
+.show .title h1{
+  font-size: 60px;
+  color: #aaa;
+  font-weight: bold;
+
+}
+.show .title p{
+  color: #fff;
+  margin-top: -37px;
+  font-size: 25px;
+}
